@@ -1,0 +1,12 @@
+!.gitignore
+.*
+/fedprox_sanity_check/
+/old/
+/nature/
+*.sh
+/global_model.h5
+*.out
+/strategy1_seed1/
+/strategy1_seed100/
+/strategy1_seed42/
+/data/
