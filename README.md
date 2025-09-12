@@ -39,13 +39,13 @@ Souza, R.,
 
 ## All scripts have parameters that need to be called with descriptions in the argument parser. An example of how to call all of them:
 
-# FedTM with 2 warmup (-wp 2) rounds using FedAVG (-s 1), where sites with local dataset >= 40 (-split 40) train the model for 10 epochs (-epochs_f 10), then 28 cycles (-cycles 28) of TM is performed where all sites train the model for 1 epoch (-epochs_t 1). The final model name is best_model (-out). If the strategy was 2, it would implement FedProx with mu of 0.001. Mu is a parameter and needs to be passed, but for strategy 1, it will not be used.
+#### FedTM with 2 warmup (-wp 2) rounds using FedAVG (-s 1), where sites with local dataset >= 40 (-split 40) train the model for 10 epochs (-epochs_f 10), then 28 cycles (-cycles 28) of TM is performed where all sites train the model for 1 epoch (-epochs_t 1). The final model name is best_model (-out). If the strategy was 2, it would implement FedProx with mu of 0.001. Mu is a parameter and needs to be passed, but for strategy 1, it will not be used.
 
 ```
 python main.py -fn_train ./data/training.csv -cycles 28 -epochs_f 10 -epochs_t 1 -batch_size 5 -split 40 -wp 2 -mu 0.001 -s 1 -out best_model
 
 ```
-# For the inference, you can change the loop indices to determine the range of models you want to evaluate.
+#### For the inference, you can change the loop indices to determine the range of models you want to evaluate.
 
 
 ```
