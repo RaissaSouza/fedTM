@@ -36,13 +36,6 @@ Souza, R.,
 6. **sfcn**: contains the definition of the model architecture used for disease classification.
 
 ### Running this code
-<div align="center">
-
-</div>
-
-<p align="center">
-<img src="flowchart.png?raw=true">
-</p>
 
 ## All scripts have parameters that need to be called with descriptions in the argument parser. An example of how to call all of them:
 
