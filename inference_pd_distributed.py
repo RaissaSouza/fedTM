@@ -108,16 +108,6 @@ for i in range(17,18,1):
     print("For cycle number "+str(cycle_count))
     print("######Overall Metrics######")
     metrics = compute_metrics(df,"cm_agg_"+name)
-    # print("########Male Metrics#######")
-    # metrics_male = compute_metrics(df_male,"cm_male_"+name)
-    # print("######Female Metrics#######")
-    # metrics_female = compute_metrics(df_female,"cm_female_"+name)
-
-
-
-    #new_result = {'cycle':cycle_count, 'accuracy':metrics[0], 'sensitivity':metrics[1],'specificity':metrics[2],'AUC_ROC':metrics[3],
-    #               'male_accuracy':metrics_male[0],'male_sensitivity':metrics_male[1],'male_specificity':metrics_male[2],'male AUC_ROC':metrics_male[3],
-    #               'female_accuracy':metrics_female[0],'female_sensitivity':metrics_female[1],'female_specificity':metrics_female[2],'female AUC_ROC':metrics_female[3]}
     new_result = {'cycle':cycle_count, 'accuracy':metrics[0], 'sensitivity':metrics[1],'specificity':metrics[2],'AUC_ROC':metrics[3]}
 
     results.loc[len(results)] = new_result
