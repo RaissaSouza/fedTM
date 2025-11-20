@@ -1,4 +1,4 @@
-# Better together: Combining federated learning and travelling model boosts performance and opens opportunities for digital health equity
+#Combining federated learning and travelling model boosts performance and opens opportunities for digital health equity
 
 
 <div align="center">
