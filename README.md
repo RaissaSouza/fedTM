@@ -10,7 +10,7 @@
 </p>
 
 
-Implementation for decentralized quality control that is published by the (coming soon): "[Better together: Combining federated learning and travelling model boost performance in distributed learning setup] (https://doi.org/).
+Implementation for decentralized quality control that is published by the npj Digital Medicine: "Combining federated learning and travelling model boosts performance and opens opportunities for digital health equity" (https://doi.org/10.1038/s41746-026-02483-y).
 
 Our code here is for the implementation of FedTM, a novel hybrid method that combines the FL and TM distributed learning approaches. FedTM training was divided into two phases: FL warmup and TM refinement. In the warmup phase, only sites with larger local datasets (s ≥40, 30, or 20 samples) participated in the training process, using a FL strategy (f = FedAvg [assumed equal contribution from all sites during the aggregation step] or f = FedProx [introduced an L2 regularization term to limit the divergence of local models from the global model]) for a predefined number of rounds (R = 2, 5, or 10). The goal of the warmup phase was to provide a strong initialization for the TM phase, which included all sites regardless of the local dataset size. The TM phase ran for a fixed number of cycles (C = 28, 25, or 20), with the exact number depending on the number of rounds completed during the warmup phase to ensure a combined total of 30 cycles across both phases.
 * s, f, r, and c are all customizable parameters. See an example of how to train below.
@@ -18,12 +18,26 @@ Our code here is for the implementation of FedTM, a novel hybrid method that com
 If you find our framework, code, or paper useful to your research, please cite us!
 ```
 
-@article{
+
+@article{Souza2026,
+   author = {Raissa Souza and Emma A. M. Stanley and Erik Y. Ohara and Richard Camicioli and Oury Monchi and Zahinoor Ismail and Matthias Wilms and Nils D. Forkert},
+   doi = {10.1038/s41746-026-02483-y},
+   issn = {2398-6352},
+   issue = {1},
+   journal = {npj Digital Medicine},
+   keywords = {Computational biology and bioinformatics,Health care,Mathematics and computing},
+   month = {2},
+   pages = {294},
+   publisher = {Nature Publishing Group},
+   title = {Combining federated learning and travelling model boosts performance and opens opportunities for digital health equity},
+   volume = {9},
+   url = {https://www.nature.com/articles/s41746-026-02483-y},
+   year = {2026}
 }
 
 ```
 ```
-Souza, R., 
+Souza, R., Stanley, E. A. M., Ohara, E. Y., Camicioli, R., Monchi, O., Ismail, Z., Wilms, M., & Forkert, N. D. (2026). Combining federated learning and travelling model boosts performance and opens opportunities for digital health equity. Npj Digital Medicine, 9(1), 294. https://doi.org/10.1038/s41746-026-02483-y
 ```
 
 ### Abstract 
@@ -35,6 +49,7 @@ Souza, R.,
 4. **inference_pd_distributed**: has a script that generates the metrics (accuracy, sensitivity, specificity, AUROC for the overall dataset) for the models per cycle.
 5. **main**: is the core of the hybrid implementation and this is the script you should run for training.
 6. **sfcn**: contains the definition of the model architecture used for disease classification.
+7. **travelling_model**: contains the core code of travelling model strategy.
 
 ### Running this code
 
